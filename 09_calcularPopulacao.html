@@ -6,11 +6,28 @@
     */
 
     //ENTRADA
+    let populacao5Anos = [];
+    let populacao10Anos = [];
+    let contadorTemp5 = 0;
+    let contadorTemp10 = 0;
 
-    
+
     //PROCESSAMENTO
-    
+    for (let i = 50000; contadorTemp5 <= 5; i = i + (i * 0.015)) {
+        contadorTemp5 = contadorTemp5 + 1
+        populacao5Anos.push(i);
+    }
+    populacao5Anos.sort((a, b) => b - a);
+
+    for (let i = 50000; contadorTemp10 <= 10; i = i + (i * 0.015)) {
+        contadorTemp10 = contadorTemp10 + 1
+        populacao10Anos.push(i);
+    }
+    populacao10Anos.sort((a, b) => b - a);
+
 
     //SAÍDA
+    alert(`Em um prazo de 5 anos essa cidade está prevista para ter ${populacao5Anos[0].toFixed(0)} habitantes`);
+    alert(`Em um prazo de 10 anos essa cidade está prevista para ter ${populacao10Anos[0].toFixed(0)} habitantes`);
 
 </script>

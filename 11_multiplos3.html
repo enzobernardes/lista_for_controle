@@ -5,11 +5,18 @@
     */
 
     //ENTRADA
+    let multiplos = [];
+    let soma = 0;
 
 
     //PROCESSAMENTO
+    for(i = 0; i <= 100; i += 3 ){
+        multiplos.push(i)
+        soma += i
+    }
 
 
     //SAÍDA
+    document.write(`Números múltiplos de 3: ${multiplos.join(", ")} e a soma desses valores é de: ${soma}`);
 
 </script>

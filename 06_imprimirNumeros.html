@@ -6,11 +6,24 @@
     */
 
     //ENTRADA
+    const numero1 = Number(prompt(`Informe um número (1/2):`));
+    const numero2 = Number(prompt(`Informe um número (2/2):`));
+    let arrayNum = [];
 
-    
+
     //PROCESSAMENTO
+    if (numero1 + 1 == numero2) {
+        alert(`Não há números entre o número ${numero1} e o número ${numero2}`);
+    } else if (numero1 < numero2) {
+        for (let i = numero1 + 1; i < numero2; i++) {
+            arrayNum.push(i);
+        }
+        alert(`Os números entre o número ${numero1} e o número ${numero2} são: ${arrayNum.join(", ")}`);
+    } else {
+        alert(`O primeiro número informado deve ser menor que o segundo`);
+    }
 
-    
+
     //SAÍDA
 
 </script>

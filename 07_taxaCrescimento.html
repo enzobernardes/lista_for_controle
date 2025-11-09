@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
+    let array = [];
 
-    
+
     //PROCESSAMENTO
+    for (let i = 80000; i < 200000; i = i + (i * 0.03)) {
+        array.push(i);
+    }
 
-    
+
     //SAÍDA
+    alert(`Serão necessários ${array.length} anos para este país atingir 200000 habitantes`);
+
 
 </script>

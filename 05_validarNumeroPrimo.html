@@ -6,9 +6,30 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt(`Informe um número:`));
+    let array = [];
+    let calcNumPrimo = [];
+    let calcNumNaoPrimo = [];
 
 
     //PROCESSAMENTO
+    for (let i = 2; i <= numero - 1; i++) {
+        array.push(i);
+    }
+
+    for (const numArray of array) {
+        if (numero % numArray == 0) {
+            calcNumNaoPrimo.push(numArray);
+        } else {
+            calcNumPrimo.push(numArray);
+        }
+    }
+
+    if (calcNumNaoPrimo.length == 0) {
+        alert(`É primo`);
+    } else {
+        alert(`Não é primo`);
+    }
 
 
     //SAÍDA
